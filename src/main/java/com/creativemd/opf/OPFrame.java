@@ -25,7 +25,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class OPFrame {
 	
 	public static final String modid = "opframe";
-	public static final String version = "1.4.0";
+	public static final String version = "1.7.0";
 	
 	public static Block frame = new BlockPicFrame().setUnlocalizedName("opFrame").setRegistryName("opFrame");
 	

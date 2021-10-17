@@ -1,13 +1,12 @@
 [
 {
   "modid": "opframe",
-  "name": "OnlinePictureFrame",
-  "description": "",
+  "name": "WCOnlinePictureFrame",
+  "description": "WesterosCraft continuation of CreativeMD OnlinePicutreFrame mod",
   "mcversion": "${mcversion}",
-  "version": "1.7",
-  "url": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2408667-creativecore-v1-3-24-required-by-randomadditions",
+  "version": "1.7.0",
   "updateUrl": "",
-  "authorList": ["CreativeMD"],
+  "authorList": ["CreativeMD","mikeprimm"],
   "credits": "",
   "logoFile": "",
   "screenshots": [],

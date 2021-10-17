@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+// define the properties file
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = "1.7.0-alpha-1"
+group= "com.westeroscraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "WCOnlinePictureFrame"
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
+
+minecraft {
+    version = config.minecraft_version + "-" + config.forge_version
+	runDir = "run"
+	mappings = config.mappings_version
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        name = "dynmap"
+        url = "https://repo.mikeprimm.com"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation(files("libs/CreativeCore_v1.10.65_mc1.12.2.jar"))
+    implementation "uk.co.caprica:vlcj:4.7.1"
+}
+
+configurations {
+    onlinepictureframe
+    compile.extendsFrom onlinepictureframe
+}
+
+processResources
+{
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+    }
+}
+
+jar {
+   classifier = "forge-" + config.minecraft_version
+   destinationDir = project.projectDir
+   from { configurations.onlinepictureframe.collect { it.isDirectory() ? it : zipTree(it) } }
+}
