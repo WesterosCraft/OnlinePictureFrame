@@ -158,8 +158,10 @@ public class DownloadThread extends Thread {
 		InputStream in = null;
 		try {
 			in = connection.getInputStream();
-			if (!connection.getContentType().startsWith("image"))
+			if ((connection.getContentType() == null) || (!connection.getContentType().startsWith("image"))) {
+				LOGGER.warn(String.format("Failed to load image: %s (rc=%d)", url, responseCode));
 				throw new FoundVideoException();
+			}
 			String etag = connection.getHeaderField("ETag");
 			long lastModifiedTimestamp;
 			long expireTimestamp = -1;
