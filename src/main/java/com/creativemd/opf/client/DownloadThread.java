@@ -53,7 +53,6 @@ public class DownloadThread extends Thread {
 	private ProcessedImageData processedImage;
 	private String error;
 	private boolean complete;
-	private boolean isVideo;
 	
 	public DownloadThread(String url) {
 		this.url = url;
@@ -72,10 +71,6 @@ public class DownloadThread extends Thread {
 	
 	public boolean hasFailed() {
 		return hasFinished() && error != null;
-	}
-	
-	public boolean isVideo() {
-		return isVideo;
 	}
 	
 	public String getError() {
@@ -113,13 +108,11 @@ public class DownloadThread extends Thread {
 			} finally {
 				IOUtils.closeQuietly(in);
 			}
-		} catch (FoundVideoException e) {
-			isVideo = true;
 		} catch (Exception e) {
 			exception = e;
 			LOGGER.error("An exception occurred while loading OPFrame image", e);
 		}
-		if (!isVideo && processedImage == null) {
+		if (processedImage == null) {
 			if (exception == null)
 				error = "download.exception.gif";
 			else if (exception.getMessage().startsWith("Server returned HTTP response code: 403"))
@@ -158,8 +151,8 @@ public class DownloadThread extends Thread {
 		InputStream in = null;
 		try {
 			in = connection.getInputStream();
-			if ((connection.getContentType() == null) || (!connection.getContentType().startsWith("image"))) {
-				LOGGER.warn(String.format("Failed to load image: %s (rc=%d)", url, responseCode));
+			String content = connection.getContentType() != null ? connection.getContentType() : "image/jpg";	// Assume image
+			if (content.startsWith("video")) {	// Only throw video exception found if it is video...
 				throw new FoundVideoException();
 			}
 			String etag = connection.getHeaderField("ETag");
@@ -252,9 +245,7 @@ public class DownloadThread extends Thread {
 		PictureTexture texture = null;
 		
 		if (!thread.hasFailed()) {
-			if (thread.isVideo())
-				texture = new VideoTexture(thread.url);
-			else if (thread.processedImage.isAnimated())
+			if (thread.processedImage.isAnimated())
 				texture = new AnimatedPictureTexture(thread.processedImage);
 			else
 				texture = new OrdinaryTexture(thread.processedImage);

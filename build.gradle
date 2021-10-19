@@ -50,7 +50,7 @@ repositories {
 
 dependencies {
     implementation(files("libs/CreativeCore_v1.10.65_mc1.12.2.jar"))
-    implementation "uk.co.caprica:vlcj:4.7.1"
+    //implementation "uk.co.caprica:vlcj:4.7.1"
 }
 
 configurations {
