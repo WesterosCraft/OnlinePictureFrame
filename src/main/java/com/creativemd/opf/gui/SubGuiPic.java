@@ -1,15 +1,15 @@
 package com.creativemd.opf.gui;
 
-import com.creativemd.creativecore.common.gui.container.SubGui;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiAnalogeSlider;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiButton;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiCheckBox;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiLabel;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiStateButton;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiSteppedSlider;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiTextfield;
-import com.creativemd.creativecore.common.gui.event.gui.GuiControlClickEvent;
-import com.creativemd.creativecore.common.utils.mc.ColorUtils;
+import team.creative.creativecore.common.gui.container.SubGui;
+import team.creative.creativecore.common.gui.controls.gui.GuiAnalogeSlider;
+import team.creative.creativecore.common.gui.controls.gui.GuiButton;
+import team.creative.creativecore.common.gui.controls.gui.GuiCheckBox;
+import team.creative.creativecore.common.gui.controls.gui.GuiLabel;
+import team.creative.creativecore.common.gui.controls.gui.GuiStateButton;
+import team.creative.creativecore.common.gui.controls.gui.GuiSteppedSlider;
+import team.creative.creativecore.common.gui.controls.gui.GuiTextfield;
+import team.creative.creativecore.common.gui.event.gui.GuiControlClickEvent;
+import team.creative.creativecore.common.utils.mc.ColorUtils;
 import com.creativemd.opf.OPFrame;
 import com.creativemd.opf.block.TileEntityPicFrame;
 import com.creativemd.opf.client.DownloadThread;

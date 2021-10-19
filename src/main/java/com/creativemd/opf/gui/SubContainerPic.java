@@ -1,6 +1,6 @@
 package com.creativemd.opf.gui;
 
-import com.creativemd.creativecore.common.gui.premade.SubContainerTileEntity;
+import team.creative.creativecore.common.gui.premade.SubContainerTileEntity;
 import com.creativemd.opf.OPFrame;
 import com.creativemd.opf.block.TileEntityPicFrame;
 

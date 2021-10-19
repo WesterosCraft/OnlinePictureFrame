@@ -1,6 +1,6 @@
 package com.creativemd.opf.client;
 
-import com.creativemd.creativecore.client.rendering.model.CreativeBlockRenderHelper;
+import team.creative.creativecore.client.rendering.model.CreativeBlockRenderHelper;
 import com.creativemd.opf.OPFrame;
 import com.creativemd.opf.block.TileEntityPicFrame;
 

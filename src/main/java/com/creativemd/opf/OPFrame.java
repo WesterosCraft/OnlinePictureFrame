@@ -1,6 +1,6 @@
 package com.creativemd.opf;
 
-import com.creativemd.creativecore.common.config.holder.CreativeConfigRegistry;
+import team.creative.creativecore.common.config.holder.CreativeConfigRegistry;
 import com.creativemd.opf.block.BlockPicFrame;
 import com.creativemd.opf.block.TileEntityPicFrame;
 import com.creativemd.opf.client.OPFrameClient;

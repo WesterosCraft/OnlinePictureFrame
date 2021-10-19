@@ -1,6 +1,6 @@
 package com.creativemd.opf;
 
-import com.creativemd.creativecore.common.config.ConfigModGuiFactory;
+import team.creative.creativecore.common.config.ConfigModGuiFactory;
 
 public class OpFrameSettings extends ConfigModGuiFactory {
 	

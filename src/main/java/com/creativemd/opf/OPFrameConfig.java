@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-import com.creativemd.creativecore.common.config.api.CreativeConfig;
-import com.creativemd.creativecore.common.config.sync.ConfigSynchronization;
+import team.creative.creativecore.common.config.api.CreativeConfig;
+import team.creative.creativecore.common.config.sync.ConfigSynchronization;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;

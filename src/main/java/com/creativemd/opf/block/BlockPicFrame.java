@@ -2,14 +2,14 @@ package com.creativemd.opf.block;
 
 import java.util.ArrayList;
 
-import com.creativemd.creativecore.client.rendering.RenderBox;
-import com.creativemd.creativecore.client.rendering.model.ICreativeRendered;
-import com.creativemd.creativecore.common.block.TileEntityState;
-import com.creativemd.creativecore.common.gui.container.SubContainer;
-import com.creativemd.creativecore.common.gui.container.SubGui;
-import com.creativemd.creativecore.common.gui.opener.GuiHandler;
-import com.creativemd.creativecore.common.gui.opener.IGuiCreator;
-import com.creativemd.creativecore.common.utils.math.box.AlignedBox;
+import team.creative.creativecore.client.render.box.RenderBox;
+import team.creative.creativecore.client.render.model.ICreativeRendered;
+import team.creative.creativecore.common.block.TileEntityState;
+import team.creative.creativecore.common.gui.container.SubContainer;
+import team.creative.creativecore.common.gui.container.SubGui;
+import team.creative.creativecore.common.gui.opener.GuiHandler;
+import team.creative.creativecore.common.gui.opener.IGuiCreator;
+import team.creative.creativecore.common.util.math.box.AlignedBox;
 import com.creativemd.opf.OPFrame;
 import com.creativemd.opf.gui.SubContainerPic;
 import com.creativemd.opf.gui.SubGuiPic;

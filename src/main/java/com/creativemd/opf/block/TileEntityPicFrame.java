@@ -1,7 +1,7 @@
 package com.creativemd.opf.block;
 
-import com.creativemd.creativecore.common.tileentity.TileEntityCreative;
-import com.creativemd.creativecore.common.utils.math.box.AlignedBox;
+import com.creativemd.opf.tileentity.TileEntityCreative;
+import team.creative.creativecore.common.util.math.box.AlignedBox;
 import com.creativemd.opf.client.DownloadThread;
 import com.creativemd.opf.client.PictureTexture;
 

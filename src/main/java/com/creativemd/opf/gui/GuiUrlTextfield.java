@@ -2,10 +2,10 @@ package com.creativemd.opf.gui;
 
 import java.util.ArrayList;
 
-import com.creativemd.creativecore.common.gui.GuiRenderHelper;
-import com.creativemd.creativecore.common.gui.client.style.ColoredDisplayStyle;
-import com.creativemd.creativecore.common.gui.client.style.Style;
-import com.creativemd.creativecore.common.gui.controls.gui.GuiTextfield;
+import team.creative.creativecore.common.gui.GuiRenderHelper;
+import team.creative.creativecore.common.gui.client.style.ColoredDisplayStyle;
+import team.creative.creativecore.common.gui.client.style.Style;
+import team.creative.creativecore.common.gui.controls.gui.GuiTextfield;
 import com.creativemd.opf.OPFrame;
 import com.google.common.collect.Lists;
 
